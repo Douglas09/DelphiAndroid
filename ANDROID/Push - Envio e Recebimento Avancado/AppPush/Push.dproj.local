@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/07/05 10:10:58.000.623,=C:\Users\Gledston Reis\Documents\Embarcadero\Studio\Projects\Unit9.pas</Transaction>
+    <Transaction>2019/07/05 10:13:12.000.380,C:\Projetos\Push\Main.fmx=C:\Users\Gledston Reis\Documents\Embarcadero\Studio\Projects\Unit9.fmx</Transaction>
+    <Transaction>2019/07/05 10:13:12.000.380,C:\Projetos\Push\Main.pas=C:\Users\Gledston Reis\Documents\Embarcadero\Studio\Projects\Unit9.pas</Transaction>
+    <Transaction>2019/07/05 10:13:21.000.410,C:\Projetos\Push\Push.dproj=C:\Users\Gledston Reis\Documents\Embarcadero\Studio\Projects\Project9.dproj</Transaction>
+    <Transaction>2019/07/05 10:25:31.000.157,=C:\Projetos\Push\Java\output\jar\ReceiverPush.jar</Transaction>
+    <Transaction>2019/07/05 15:28:43.000.996,=C:\Projetos\Push\AppPush\Java\output\jar\ReceiverPush.jar</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<PMacOS iOSSimulator="iPhone5"/>
+		<NoProfile Android="" iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>

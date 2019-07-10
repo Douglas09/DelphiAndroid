@@ -1,0 +1,79 @@
+object FormMain: TFormMain
+  Left = 0
+  Top = 0
+  Caption = 'Sender Push'
+  ClientHeight = 266
+  ClientWidth = 431
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Label1: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 144.000000000000000000
+    Size.Width = 217.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Comando a ser enviado'
+    TabOrder = 0
+  end
+  object MemoToken: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    TextSettings.WordWrap = True
+    Position.X = 8.000000000000000000
+    Position.Y = 32.000000000000000000
+    Size.Width = 417.000000000000000000
+    Size.Height = 113.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Viewport.Width = 413.000000000000000000
+    Viewport.Height = 109.000000000000000000
+  end
+  object Label2: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Text = 'Token para envio'
+    TabOrder = 2
+  end
+  object EditMessage: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 3
+    Position.X = 8.000000000000000000
+    Position.Y = 224.000000000000000000
+    Size.Width = 417.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label3: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 200.000000000000000000
+    Text = 'Mensagem'
+    TabOrder = 4
+  end
+  object ButtonSend: TButton
+    Position.X = 304.000000000000000000
+    Position.Y = 168.000000000000000000
+    Size.Width = 121.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Text = 'Enviar'
+    OnClick = ButtonSendClick
+  end
+  object ComboBoxCommand: TComboBox
+    Items.Strings = (
+      'Abrir Aplicativo'
+      'Abrir e Mostrar Mensagem'
+      'Somente Notifica'#231#227'o'
+      'Vibrar, unlock e tocar som')
+    ItemIndex = 0
+    Position.X = 8.000000000000000000
+    Position.Y = 176.000000000000000000
+    Size.Width = 281.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+  end
+end

@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{6E365285-2A1E-482F-88EE-CDDA97A7EDFD}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="PushSender\ProjectSender.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="AppPush\Push.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ProjectSender">
+        <MSBuild Projects="PushSender\ProjectSender.dproj"/>
+    </Target>
+    <Target Name="ProjectSender:Clean">
+        <MSBuild Projects="PushSender\ProjectSender.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ProjectSender:Make">
+        <MSBuild Projects="PushSender\ProjectSender.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Push">
+        <MSBuild Projects="AppPush\Push.dproj"/>
+    </Target>
+    <Target Name="Push:Clean">
+        <MSBuild Projects="AppPush\Push.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Push:Make">
+        <MSBuild Projects="AppPush\Push.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ProjectSender;Push"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ProjectSender:Clean;Push:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ProjectSender:Make;Push:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
